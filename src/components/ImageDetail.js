@@ -2,11 +2,12 @@ import React from "react";
 import { Text, View, StyleSheet, Image} from 'react-native'
 import { Colors } from "react-native/Libraries/NewAppScreen";
 
-const ImageDetail = (props) => {
+const ImageDetail = ({imageSource, title, score}) => {
     return (
         <View>
-            <Image source = {props.imageSource}/>
-            <Text style = {styles.textStyles}>{props.title}</Text>
+            <Image source = {imageSource}/>
+            <Text style = {styles.textStyles}>{title}</Text>
+            <Text style = {styles.textStyles}>Image score - {score}</Text>
         </View>
     );
 }
