@@ -2,9 +2,16 @@ import React, {useState} from "react";
 import { Text, View, StyleSheet, Button} from "react-native"
 
 const ColorScreen = () => {
-    return(
+    const [colors, setColor] = useState([])
+    console.log(colors)
+     return(
         <View>
-            <Button title="Add a color"/>
+            <Button 
+                title="Add a color"
+                onPress={()=>{
+                    setColor([...colors, randomRGB()])
+                }}
+            />
             <View 
                 style = {{height: 100, width: 100, backgroundColor: randomRGB()}}
             />
