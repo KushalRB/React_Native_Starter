@@ -8,24 +8,44 @@ const SquareScreen = () => {
     const [red, setRed] = useState(0)
     const [green, setGreen] = useState(0)
     const [blue, setBlue] = useState(0)
+
+    const setColor = (color, change) => {
+        switch(color){
+            case 'Red' :
+                (red + change >= 0 && red + change <= 255) ? setRed(red + change) : null
+                return;
+            case 'Green' :
+                (green + change >= 0 && green + change <= 255) ? setGreen(green + change) : null
+                return;
+            case 'Blue' :
+                (blue + change >= 0 && blue + change <= 255) ? setBlue(blue + change) : null
+                return;
+            default:
+                return;
+        }
+
+    }
     
     return(
         <View>
             <ColorCounter 
                 color='Red'
-                onIncrease={() => setRed(red + COLOR_CONSTANT)}
-                onDecrease={() => setRed(red - COLOR_CONSTANT)}
+                onIncrease={() => setColor('Red', COLOR_CONSTANT)}
+                onDecrease={() => setColor('Red', -COLOR_CONSTANT)}
             />
             <ColorCounter
                 color='Green'
-                onIncrease={() => setGreen(green + COLOR_CONSTANT)}
-                onDecrease={() => setGreen(green - COLOR_CONSTANT)}
+                onIncrease={() => setColor('Green', COLOR_CONSTANT)}
+                onDecrease={() => setColor('Green', -COLOR_CONSTANT)}
             />
             <ColorCounter 
                 color='Blue'
-                onIncrease={() => setBlue(blue + COLOR_CONSTANT)}
-                onDecrease={() => setBlue(blue - COLOR_CONSTANT)}
+                onIncrease={() => setColor('Blue', COLOR_CONSTANT)}
+                onDecrease={() => setColor('Blue', -COLOR_CONSTANT)}
             />
+            <View style={{height: 10}}/>
+            <Text>Red: {red} , Green: {green} , Blue: {blue}</Text>
+            <View style={{height: 10}}/>
              <View 
                 style={{
                 height: 150, 
