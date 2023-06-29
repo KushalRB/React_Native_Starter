@@ -15,14 +15,13 @@ const styles = StyleSheet.create({
   viewStyle: {
     borderWidth: 4,
     borderColor: "black",
-    margin: 8,
-    padding: 8,
-    alignItems: 'center'
+    height: 400,
+    flexDirection: 'row-reverse',
+    justifyContent: 'space-evenly'
   },
   testStyle: {
     borderWidth: 4,
     borderColor: "green",
-    padding: 16,
   },
 });
 
