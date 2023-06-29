@@ -4,24 +4,26 @@ import { Text, View, StyleSheet, TextInput } from "react-native";
 const BoxScreen = () => {
   return (
     <View style={styles.viewStyle}>
-      <Text style={styles.testStyle}>Box Screen </Text>
+      <Text style={styles.testStyle}>Child #1</Text>
+      <Text style={styles.testStyle}>Child #2</Text>
+      <Text style={styles.testStyle}>Child #3</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  viewStyle:{
-    borderWidth : 4,
-    borderColor : 'black',
-    margin : 8,
-    padding: 2
+  viewStyle: {
+    borderWidth: 4,
+    borderColor: "black",
+    margin: 8,
+    padding: 8,
+    alignItems: 'center'
   },
-  testStyle : {
-    borderWidth : 2,
-    borderColor : 'green',
-    margin : 28,
-    padding: 24
-  }
-})
+  testStyle: {
+    borderWidth: 4,
+    borderColor: "green",
+    padding: 16,
+  },
+});
 
-export default BoxScreen
+export default BoxScreen;
