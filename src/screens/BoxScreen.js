@@ -3,20 +3,50 @@ import { Text, View, StyleSheet, TextInput } from "react-native";
 
 const BoxScreen = () => {
   return (
-    <View style={styles.viewStyle}>
-      <Text style={styles.textOneStyle}>Child #1</Text>
-      <Text style={styles.textTwoStyle}>Child #2</Text>
-      <Text style={styles.textThreeStyle}>Child #3</Text>
+    <View style={styles.viewStyleOne}>
+      <View
+        style={{
+          height: 50,
+          width: 80,
+          backgroundColor: "red",
+          position: 'absolute'
+        }}
+      />
+      <View
+        style={{
+          height: 50,
+          width: 80,
+          backgroundColor: "blue",
+          alignSelf: 'flex-end'
+        }}
+      />
+
+      <View
+        style={{
+          height: 50,
+          width: 80,
+          backgroundColor: "green",
+          alignSelf: "center",
+        }}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  viewStyle: {
-    borderWidth: 4,
+  viewStyleOne: {
+    borderWidth: 2,
     borderColor: "black",
-    alignItems: 'flex-start',
-    height: 300
+    alignItems: "flex-start",
+    flexDirection: "column",
+    margin: 8,
+    height: 104,
+  },
+  viewStyleTwo: {
+    alignItems: "flex-start",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    height: 50,
   },
   testStyle: {
     borderWidth: 4,
@@ -25,20 +55,20 @@ const styles = StyleSheet.create({
   textOneStyle: {
     borderWidth: 4,
     borderColor: "green",
-    flex: 2
+    flex: 2,
   },
   textTwoStyle: {
     borderWidth: 4,
     borderColor: "green",
-    alignSelf: 'stretch',
-    textAlign: 'center',
-    flex: 1
+    alignSelf: "stretch",
+    textAlign: "center",
+    ...StyleSheet.absoluteFillObject,
   },
   textThreeStyle: {
     borderWidth: 4,
     borderColor: "green",
-    flex: 1
-  }
+    flex: 1,
+  },
 });
 
 export default BoxScreen;
