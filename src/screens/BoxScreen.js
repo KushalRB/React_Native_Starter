@@ -9,24 +9,26 @@ const BoxScreen = () => {
           height: 50,
           width: 80,
           backgroundColor: "red",
-          position: 'absolute'
-        }}
-      />
-      <View
-        style={{
-          height: 50,
-          width: 80,
-          backgroundColor: "blue",
-          alignSelf: 'flex-end'
-        }}
-      />
 
+          opacity: 0.3,
+        }}
+      />
+      
       <View
         style={{
           height: 50,
           width: 80,
           backgroundColor: "green",
-          alignSelf: "center",
+          opacity: 0.3,
+          top: 50
+        }}
+      />
+      <View
+        style={{
+          height: 50,
+          width: 80,
+          backgroundColor: "purple",
+          opacity: 0.3,
         }}
       />
     </View>
@@ -38,12 +40,13 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: "black",
     alignItems: "flex-start",
-    flexDirection: "column",
+    flexDirection: "row",
     margin: 8,
     height: 104,
+    justifyContent: 'space-between'
   },
   viewStyleTwo: {
-    alignItems: "flex-start",
+    alignSelf: "flex-start",
     flexDirection: "row",
     justifyContent: "space-around",
     height: 50,
