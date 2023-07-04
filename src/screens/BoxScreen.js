@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, TextInput } from "react-native";
 
 const BoxScreen = () => {
   return (
+    <View>
     <View style={styles.viewStyleOne}>
       <View
         style={{
@@ -18,31 +19,33 @@ const BoxScreen = () => {
         style={{
           height: 50,
           width: 80,
-          backgroundColor: "green",
-          opacity: 0.3,
-          top: 50
-        }}
-      />
-      <View
-        style={{
-          height: 50,
-          width: 80,
           backgroundColor: "purple",
           opacity: 0.3,
         }}
       />
+      
     </View>
+    <View
+        style={{
+          height: 50,
+          width: 80,
+          backgroundColor: "green",
+          opacity: 0.3,
+          alignSelf: 'center'
+        }}
+      />
+    </View>
+    
   );
 };
 
 const styles = StyleSheet.create({
   viewStyleOne: {
-    borderWidth: 2,
-    borderColor: "black",
+   
     alignItems: "flex-start",
     flexDirection: "row",
     margin: 8,
-    height: 104,
+    
     justifyContent: 'space-between'
   },
   viewStyleTwo: {
